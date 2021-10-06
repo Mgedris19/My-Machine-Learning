@@ -65,8 +65,8 @@ namespace Series
     private:
         // Member variables
         std::string name;
-        std::vector<T> data;
         std::vector<std::string> index;
+        std::vector<T> data;
         std::string datatype;
     };
 }

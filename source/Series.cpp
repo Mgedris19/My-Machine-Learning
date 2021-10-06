@@ -15,6 +15,7 @@
 #include <map>
 #include <tuple>
 #include <typeinfo>
+#include <iostream>
 
 using namespace Series; // Our custom namespace scope
 
@@ -26,6 +27,8 @@ using namespace Series; // Our custom namespace scope
 //Returns the data dype.
 std::string dtype(int variable)
 {
+    std::cout << typeid(variable).name() << std::endl;
+
     if (typeid(variable)==typeid(int)){
         //std::cout<<variable<<" is an int datatype";
     }
@@ -53,6 +56,7 @@ std::string dtype(int variable)
 //Function to find the size of series.  Not sure if something should be passed as a parameter.
 int size()
 {
+    // return index.size();
     //vector.size();
 }
 
@@ -65,6 +69,11 @@ std::tuple<int, int, int> shape()
 {
     // @TODO get the number of values for each 
     // dimension (the first dimension in this case)
+    // int x = this.size();
+    int x = 3;
+    int y = 1;
+    int z = 0;
+    return std::tuple(x, y, z);
 }
 
 // ** Don't touch this yet **
