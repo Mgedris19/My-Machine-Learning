@@ -1,8 +1,7 @@
 /************************************************************************************************
 * Series source file with method definitions
 * @file Series.cpp
-* @author Dane Artis @Dartis4
-* @author Matthew Gedris @mgedris19
+* @author Dane Artis
 * @version 1.0 10/5/21
 ***********************************************************************************************/
 
@@ -15,29 +14,53 @@
 #include <vector>
 #include <map>
 #include <tuple>
+#include <typeinfo>
+
+using namespace Series; // Our custom namespace scope
 
 /************************************************
  * The datatype of 'data'
  * @returns datatype as a string
  ***********************************************/
-std::string dtype()
+//Function to find a data type.  Not sure if something should be passed in as a parameter.
+//Returns the data dype.
+std::string dtype(int variable)
 {
-    // @TODO find and output the datatype
+    if (typeid(variable)==typeid(int)){
+        //std::cout<<variable<<" is an int datatype";
+    }
+    else if (typeid(variable)==typeid(float))
+    {
+        //std::cout<<variable<<" is a float datatype";
+    }
+     else if (typeid(variable)==typeid(bool))
+    {
+        //std::cout<<variable<<" is a bool datatype";
+    }
+     else if (typeid(variable)==typeid(char))
+    {
+        //std::cout<<variable<<" is a character datatype";
+    } 
+    else{
+        //std::cout<<variable<<" is a string datatype"
+    }
 }
 
 /************************************************
  * The number of elements in the 'Series'
  * @returns the number of elements as an integer
  ***********************************************/
+//Function to find the size of series.  Not sure if something should be passed as a parameter.
 int size()
 {
-    // @TODO find and output the number of rows
+    //vector.size();
 }
 
 /************************************************
  * The shape of 'Series'
  * @returns a tuple of Series dimensions
  ***********************************************/
+//Function to get the values for dimensions.
 std::tuple<int, int, int> shape()
 {
     // @TODO get the number of values for each 
@@ -50,28 +73,36 @@ std::tuple<int, int, int> shape()
  * instead of a column.
  * @returns the Transpose of 'Series'
  ***********************************************/
-template <class T>
-Series::Series<T> T()
-{
-}
+// Series<T> T()
+// {
+// }
 
 /************************************************
  * Whether the series contains elements or not
  * @returns boolean value to indicate whether 
  * 'Series' has data or not
  ***********************************************/
-bool empty()
+
+bool empty(int size)
 {
-    // @TODO return a boolean based on the size variable
+    if (size==0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 /************************************************
  * The datatype of the data set
  * @returns the datatype as a string
  ***********************************************/
-std::string dtypes()
+//Function to return data type of data
+std::string dtypes(int argument)
 {
-    // @TODO return the datatype of data
+    // I tried to do something here, but this file isn't in the main function and in an effort to put one in it made more problems
+    //than it solved.  Bellow is how I believe the function is implimented.
+   // return typeid (argument).name();
 }
 
 // ** Wait on writing this method **
@@ -100,10 +131,9 @@ int ndim()
  * boolean values for all indices
  * @returns a Series of targeted data
  ***********************************************/
-template <class T>
-Series::Series<T> loc()
-{
-}
+// Series<T> loc()
+// {
+// }
 
 // ** Don't touch this yet **
 /************************************************
@@ -112,7 +142,6 @@ Series::Series<T> loc()
  * integer values
  * @returns a Series of targeted data
  ***********************************************/
-template <class T>
-Series::Series<T> iloc()
-{
-}
+// Series<T> iloc()
+// {
+// }
