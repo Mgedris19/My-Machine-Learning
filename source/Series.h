@@ -99,16 +99,16 @@ namespace Series
             return typeid(this).name();
         }
         std::string flags(){
-            //DON'T TOUCH JUST YET.
+            //DON'T TOUCH THIS JUST YET.
         }
         int ndim(){
             return 1;
         }
         Series<T> loc(){
-            //DON'T TOUCH JUST YET.
+            //DON'T TOUCH THIS JUST YET.
         }
         Series<T> iloc(){
-            //DON'T TOUCH JUST YET.
+            //DON'T TOUCH THIS JUST YET.
         }
 
     protected:

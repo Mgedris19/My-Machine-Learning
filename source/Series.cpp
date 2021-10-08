@@ -4,7 +4,6 @@
 * @author Dane Artis
 * @version 1.0 10/5/21
 ***********************************************************************************************/
-
 #include "Series.h"
 
 #include <cassert> // because I am paranoid
