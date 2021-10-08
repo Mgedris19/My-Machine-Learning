@@ -25,28 +25,9 @@ using namespace Series; // Our custom namespace scope
  ***********************************************/
 //Function to find a data type.  Not sure if something should be passed in as a parameter.
 //Returns the data dype.
-std::string dtype(int variable)
+std::string dtype()
 {
-    std::cout << typeid(variable).name() << std::endl;
 
-    if (typeid(variable)==typeid(int)){
-        //std::cout<<variable<<" is an int datatype";
-    }
-    else if (typeid(variable)==typeid(float))
-    {
-        //std::cout<<variable<<" is a float datatype";
-    }
-     else if (typeid(variable)==typeid(bool))
-    {
-        //std::cout<<variable<<" is a bool datatype";
-    }
-     else if (typeid(variable)==typeid(char))
-    {
-        //std::cout<<variable<<" is a character datatype";
-    } 
-    else{
-        //std::cout<<variable<<" is a string datatype"
-    }
 }
 
 /************************************************
@@ -56,8 +37,7 @@ std::string dtype(int variable)
 //Function to find the size of series.  Not sure if something should be passed as a parameter.
 int size()
 {
-    // return index.size();
-    //vector.size();
+
 }
 
 /************************************************
@@ -67,13 +47,7 @@ int size()
 //Function to get the values for dimensions.
 std::tuple<int, int, int> shape()
 {
-    // @TODO get the number of values for each 
-    // dimension (the first dimension in this case)
-    // int x = this.size();
-    int x = 3;
-    int y = 1;
-    int z = 0;
-    return std::tuple(x, y, z);
+
 }
 
 // ** Don't touch this yet **
@@ -92,14 +66,9 @@ std::tuple<int, int, int> shape()
  * 'Series' has data or not
  ***********************************************/
 
-bool empty(int size)
+bool empty()
 {
-    if (size==0){
-        return true;
-    }
-    else{
-        return false;
-    }
+
 }
 
 /************************************************
@@ -107,11 +76,9 @@ bool empty(int size)
  * @returns the datatype as a string
  ***********************************************/
 //Function to return data type of data
-std::string dtypes(int argument)
+std::string dtypes()
 {
-    // I tried to do something here, but this file isn't in the main function and in an effort to put one in it made more problems
-    //than it solved.  Bellow is how I believe the function is implimented.
-   // return typeid (argument).name();
+
 }
 
 // ** Wait on writing this method **
@@ -130,7 +97,7 @@ std::string flags()
  ***********************************************/
 int ndim()
 {
-    return 1;
+
 }
 
 // ** Don't touch this yet **

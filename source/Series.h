@@ -50,24 +50,78 @@ namespace Series
         ~Series();
 
         // Methods
-        std::string dtype();
-        int size();
-        std::tuple<int, int, int> shape();
-        Series<T> T();
-        bool empty();
-        std::string dtypes();
-        std::string flags();
-        int ndim();
-        Series<T> loc();
-        Series<T> iloc();
+        std::string dtype(){
+            std::cout << typeid(this).name() << std::endl;
+            if (typeid(this)==typeid(int)){
+                std::cout<<this<<" is an int datatype";
+            }
+            else if (typeid(this)==typeid(float))
+            {
+                std::cout<<this<<" is a float datatype";
+            }
+            else if (typeid(this)==typeid(bool))
+            {
+                std::cout<<this<<" is a bool datatype";
+            }
+            else if (typeid(this)==typeid(char))
+            {
+                std::cout<<this<<" is a character datatype";
+            } 
+            else{
+                std::cout<<this<<" is a string datatype";
+            }
+        }
+        int size(){
+            return this.size();
+        }
+        std::tuple<int, int, int> shape(){
+            // @TODO get the number of values for each 
+            //dimension (the first dimension in this case)
+            int x = this.size();
+            int x = 3;
+            int y = 1;
+            int z = 0;
+            return std::tuple(x, y, z);
+        }
+        Series<T> T(){
+            //DON'T TOUCH THIS JUST YET.
+        }
+
+        bool empty(){
+            if (this.size==0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        std::string dtypes(){
+            return typeid(this).name();
+        }
+        std::string flags(){
+            //DON'T TOUCH JUST YET.
+        }
+        int ndim(){
+            return 1;
+        }
+        Series<T> loc(){
+            //DON'T TOUCH JUST YET.
+        }
+        Series<T> iloc(){
+            //DON'T TOUCH JUST YET.
+        }
 
     protected:
     private:
         // Member variables
-        std::string name;
+        std::string name{
+            return this.name;
+        }
         std::vector<std::string> index;
         std::vector<T> data;
-        std::string datatype;
+        std::string datatype{
+            return this.datatype;
+        }
     };
 }
 
